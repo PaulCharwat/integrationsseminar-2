@@ -6,6 +6,7 @@ import pandas as pd
 data1 = pd.read_csv('1.csv')
 x1 = data1["Anteil EE"]
 y1 = data1["Preis"]
+print("Correlation and p-Value for Hypotheses 1:", pearsonr(x1, y1))
 plt.figure()
 plt.scatter(x1, y1)
 plt.title("Hypothesis 1: Anteil EE vs Preis")
@@ -17,6 +18,7 @@ plt.show()
 data2 = pd.read_csv('2.csv', delimiter=';')
 x2 = data2["Temperatur"]
 y2 = data2["Verbrauch"]
+print("Correlation and p-Value for Hypotheses 2:", pearsonr(x2, y2))
 plt.figure()
 plt.scatter(x2, y2)
 plt.title("Hypothesis 2: Temperatur vs Verbrauch")
@@ -28,6 +30,7 @@ plt.show()
 data3 = pd.read_csv('3.csv', delimiter=';')
 x3 = data3["Temperatur"]
 y3 = data3["Anteil VE"]
+print("Correlation and p-Value for Hypotheses 3:", pearsonr(x3, y3))
 plt.figure()
 plt.scatter(x3, y3)
 plt.title("Hypothesis 3: Temperatur vs Anteil VE")
